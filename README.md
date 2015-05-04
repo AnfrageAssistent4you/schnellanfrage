@@ -1,6 +1,16 @@
 # Schnellanfrage
 Einbinden eines Schnellanfrage-Formulares
 
+## Grundlagen
+
+Erstellen Sie ein Formular-Objekt `<form id="aa4y_form" action="https://live.anfrageassistent4you.com/api/request.php"> </form>`.
+
+Sie können über `<input>`-Feder folgenden Daten an die Schnittstelle Übertragen
+
+| Name | Inhalt | `name` |
+|------|--------|-------:|
+|Anreise| Datum der Anreise | aa4y_anreise |
+
 ## Impressum
 
 **LSL OG**<br>

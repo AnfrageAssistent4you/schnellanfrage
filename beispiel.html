@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>Schnellanfrage</title>
+        <meta charset=utf-8>
+    </head>
+    <body>
+
+        <style> #aa4y_schnellanfrage { font-family: Verdana, sans-serif; margin: 10px; border-radius: 10px; border: 2px solid #e7e7e7; padding: 30px; width: 300px; } #aa4y_titel { font-size: 2em; margin-bottom: 20px; font-weight: bold; } #aa4y_form label{display: block; padding-bottom: 10px} #aa4y_form .input, #aa4y_form .submit { padding: 8px 12px; margin-top: 5px; margin-bottom: 5px; border: 1px solid #e7e7e7; background-color: #F8F8F8;  border-radius: 2px; } #aa4y_form .submit { color: white; background-color: #444; border-color: #444; font-size: 1.3em; margin-top: 20px; } #aa4y_form .submit, #aa4y_form .submit input { cursor: pointer; } #aa4y_form input { margin:0; padding: 0; width:100%; outline: 0 none; color: inherit; background-color: transparent; border: 0 none; } #aa4y_form input, #aa4y_form .fehler { font-size: 0.9em; } #aa4y_form .fehler { color: red; } .input[for]:focus { background-color: yellow; }</style>
+
+        <div id="aa4y_schnellanfrage">
+
+        <div id="aa4y_titel">Schnellanfrage</div>
+
+        <div id="aa4y_js" style="display: block;">
+
+            Bitte aktivieren Sie Javascript um das Schnellanfrage-Formular nutzen zu können.
+
+        </div>
+
+        <div id="aa4y_erfolg" style="display: none;">
+
+            Vielen Dank für Ihre Anfrage!<br>
+            Wir werden Ihnen so schnell wie möglich ein Angebot zusenden.
+
+        </div>
+
+        <form id="aa4y_form" style="display: none;" action="https://live.anfrageassistent4you.com/api/request.php">
+
+            <input id="aa4y_url" type="hidden" name="url" value="">
+            <input id="aa4y_betrieb" type="hidden" name="betrieb" value="HIER BITTE DIE ID DES BETRIEBES EINGEBEN">
+            <input id="aa4y_sprache" type="hidden" name="sprache" value="de">
+
+            <label>
+                Anreise:<br>
+                <div class="input"><input id="aa4y_anreise" type="text" name="anreise" value=""></div>
+                <div class="fehler" id="aa4y_fehler_anreise"></div>
+            </label>
+
+            <label>
+                Abreise:<br>
+                <div class="input"><input id="aa4y_abreise" type="text" name="abreise" value=""></div>
+                <div class="fehler" id="aa4y_fehler_abreise"></div>
+            </label>
+
+            <div style="float: left; width: 45%;">
+
+                <label>
+                    Zimmer:<br>
+                    <div class="input"><input id="aa4y_zimmer" type="text" name="zimmer" value=""></div>
+                </label>
+
+            </div>
+            <div style="float: right; width: 45%;">
+
+                <label>
+                    Erwachsene:<br>
+                    <div class="input"><input id="aa4y_erwachsene" type="text" name="erwachsene" value=""></div>
+                </label>
+
+            </div>
+            <div style="clear: both;"></div>
+            <div class="fehler" id="aa4y_fehler_zimmer"></div>
+            <div class="fehler" id="aa4y_fehler_erwachsene"></div>
+            <div style="height: 10px;"></div>
+
+            <label>
+                E-Mail:<br>
+                <div class="input"><input id="aa4y_email" type="text" name="email" value=""></div>
+                    <div class="fehler" id="aa4y_fehler_email"></div>
+            </label>
+
+                <div class="submit"><input id="aa4y_submit" type="submit" value="Senden"></div>
+
+            <script>
+
+                document.getElementById('aa4y_form').style.display = 'block';
+                document.getElementById('aa4y_erfolg').style.display = 'none';
+                document.getElementById('aa4y_js').style.display = 'none';
+                document.getElementById('aa4y_url').value = location.origin + location.pathname;
+
+                params = location.search.substr(location.search.indexOf("?")+1).split("&");
+
+                for (var i=0; i<params.length; i++) {
+
+                    temp = params[i].split("=");
+
+                    if (temp[0] == 'erfolg' && temp[1] == '1') {
+
+                        document.getElementById('aa4y_form').style.display = 'none';
+                        document.getElementById('aa4y_erfolg').style.display = 'block';
+
+                        break; 
+                    }
+
+                    if (temp[0].indexOf("fehler_") == 0) {
+
+                        id = 'aa4y_' + temp[0].split("_")[1];
+                        document.getElementById(id).parentNode.style.borderColor = "red";
+                        console.log(document.getElementById('aa4y_' + temp[0]));
+                        document.getElementById('aa4y_' + temp[0]).innerHTML = unescape(temp[1]).replace(/\+/g, ' ');
+
+                    }
+
+                    if (temp[0].indexOf("value_") == 0) {
+
+                        id = 'aa4y_' + temp[0].split("_")[1];
+                        document.getElementById(id).value = unescape(temp[1]);
+
+                    }
+                }
+
+            </script>
+
+            </form>
+        </div>
+    </body>
+</html>
