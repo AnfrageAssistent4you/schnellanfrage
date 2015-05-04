@@ -3,7 +3,7 @@ Einbinden eines Schnellanfrage-Formulares
 
 ## Impressum
 
-**LSL OG**
+**LSL OG**<br>
 Schmiedau 1<br>
 6272 Kaltenbach / Zillertal<br>
 
