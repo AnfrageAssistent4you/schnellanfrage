@@ -25,6 +25,14 @@ Ist eine Angabe nicht korrekt, wird z.B. über `aa4y_fehler_anreise` der Fehler 
 
 Die CSS-Stile sind frei anpassbar.
 
+#### Sprache
+
+Sie können `de`für Deutsch, oder `en`für Englisch übergeben.
+
+#### Format
+
+Das Datum wird im Format d.m.Y übertragen. Andere Formate können über das Feld form_datum übergeben werden. Richten Sie sich bitte bei der Angabe des Datumsformat nach der Parameter-Liste unter http://php.net/manual/de/function.date.php.
+
 ## Impressum
 
 **LSL OG**<br>
