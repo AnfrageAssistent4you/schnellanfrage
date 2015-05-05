@@ -1,15 +1,29 @@
 # Schnellanfrage
-Einbinden eines Schnellanfrage-Formulares
+Einbinden eines Schnellanfrage-Formulares zum Übergeben einer Anfrage an den AnfrageAssistent4you.
 
-## Grundlagen
+### Daten
 
-Erstellen Sie ein Formular-Objekt `<form id="aa4y_form" action="https://live.anfrageassistent4you.com/api/request.php"> </form>`.
+| Name | Beschreibung | `<input name="aa4y_*" >` |
+|:-----|:-------------|:--------|
+|Anreise| Datum der Anreise | anreise |
+|Abreise| Datum der Ebreise |  abreise |
+|Zimmer| Anzahl der Zimmer |  zimmer |
+|Erwachsene| Anzahl der mitreisenden Erwachsenen |  erwachsene |
+|E-Mail| E-Mail Adresse des Gastes | email|
 
-Sie können über `<input>`-Feder folgenden Daten an die Schnittstelle Übertragen
+### Weitere Felder
 
-| Name | Inhalt | `name` |
-|------|--------|-------:|
-|Anreise| Datum der Anreise | aa4y_anreise |
+| Name | Beschreibung | `<input name="aa4y_*" >` |
+|:-----|:-------------|:--------|
+|URL| Url zur Weiterleitung bei Eingabe-Fehlern | url |
+|Betrieb| ID des Betriebes |  betrieb |
+|Sprache| Sprache des Gastes, Sprache der Fehlermeldungen |  sprache |
+|Format| Formatierung der Datumseingaben |  form_datum |
+
+Die Daten werden per POST oder GET an https://live.anfrageassistent4you.com/api/request.php versendet. 
+Ist eine Angabe nicht korrekt, wird z.B. über `aa4y_fehler_anreise` der Fehler ausgegeben und über `aa4y_anreise` der Inhalt (value) übertragen.
+
+Die CSS-Stile sind frei anpassbar.
 
 ## Impressum
 
