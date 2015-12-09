@@ -25,6 +25,29 @@ Ist eine Angabe nicht korrekt, wird z.B. über `aa4y_fehler_anreise` der Fehler 
 
 Die CSS-Stile sind frei anpassbar.
 
+### Optionale Felder
+
+| Name | Beschreibung | `<input name="aa4y_*" >` |
+|:-----|:-------------|:--------|
+|Geschlecht| Geschlecht (m/f) | geschelcht |
+|Name| Nachname des Gastes |  name |
+|Vorname| Vorname des Gastes |  vorname |
+|Adresse| Straße und Hausnummer des Gastes |  adresse |
+|PLZ| PLZ des Gastes |  plz |
+|Ort| Wohnort des Gastes |  ort |
+|Land| Land des Gastes |  land |
+|Telefon| Telefonnummer des Gastes |  telefon |
+|Fax| Faxnummer des Gastes |  fax |
+
+Wenn Sie komplexere Belegungsvaranten übergeben möchten, können sie die Belegung für bis zu drei Zimmer und je bis zu vier Kinder wie folgt übergeben:
+
+Anzahl der Erwachsenen im ersten Zimmer:`<input name="aa4y_1_erwachsene" >`
+
+Alter des ersten Kindes im ersten Zimmer: `<input name="aa4y_1_1_alter" >`
+Alter des zweiten Kindes im ersten Zimmer: `<input name="aa4y_1_2_alter" >`
+
+Sie können das Alter des Kindes sowohl als Alter in Jahren als auch als Geburtsjahr übergeben.
+
 #### Sprache
 
 Sie können `de`für Deutsch, oder `en`für Englisch übergeben.
