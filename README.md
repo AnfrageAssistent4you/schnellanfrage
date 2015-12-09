@@ -29,7 +29,7 @@ Die CSS-Stile sind frei anpassbar.
 
 | Name | Beschreibung | `<input name="aa4y_*" >` |
 |:-----|:-------------|:--------|
-|Geschlecht| Geschlecht (m/f) | geschelcht |
+|Geschlecht| Geschlecht (m/f) | geschlecht |
 |Name| Nachname des Gastes |  name |
 |Vorname| Vorname des Gastes |  vorname |
 |Adresse| Straße und Hausnummer des Gastes |  adresse |
@@ -41,10 +41,9 @@ Die CSS-Stile sind frei anpassbar.
 
 Wenn Sie komplexere Belegungsvaranten übergeben möchten, können sie die Belegung für bis zu drei Zimmer und je bis zu vier Kinder wie folgt übergeben:
 
-Anzahl der Erwachsenen im ersten Zimmer:`<input name="aa4y_1_erwachsene" >`
-
-Alter des ersten Kindes im ersten Zimmer: `<input name="aa4y_1_1_alter" >`
-Alter des zweiten Kindes im ersten Zimmer: `<input name="aa4y_1_2_alter" >`
+Anzahl der Erwachsenen im ersten Zimmer:`<input name="aa4y_1_erwachsene" >`<br>
+Alter des ersten Kindes im ersten Zimmer: `<input name="aa4y_1_1_alter" >`<br>
+Alter des zweiten Kindes im ersten Zimmer: `<input name="aa4y_1_2_alter" >`<br>
 
 Sie können das Alter des Kindes sowohl als Alter in Jahren als auch als Geburtsjahr übergeben.
 
