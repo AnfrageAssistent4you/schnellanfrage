@@ -57,14 +57,14 @@ Das Datum wird im Format d.m.Y übertragen. Andere Formate können über das Fel
 
 ## Impressum
 
-**LSL OG**<br>
+**LSL GmbH**<br>
 Schmiedau 1<br>
 6272 Kaltenbach / Zillertal<br>
 
 Tel.: +43 720 880563<br>
 
-Firmenbuchnummer: FN 420310 d<br>
-UID-Nr. ATU69074039<br>
+Firmenbuchnummer: FN 420310 d 
+UID-Nr. ATU69074039
 Gerichtsstand: Bezirksgericht Zell am Ziller<br>
 
 Schuster Hannes, Geschäftsführung<br>
