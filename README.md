@@ -61,20 +61,11 @@ Das Datum wird im Format d.m.Y übertragen. Andere Formate können über das Fel
 Schmiedau 1<br>
 6272 Kaltenbach / Zillertal<br>
 
-Tel.: +43 720 880563<br>
+Tel.: +43 5283 40113<br>
 
 Firmenbuchnummer: FN 420310 d 
 UID-Nr. ATU69074039
 Gerichtsstand: Bezirksgericht Zell am Ziller<br>
 
-Schuster Hannes, Geschäftsführung<br>
+Jascha Lemburg, Geschäftsführung<br>
 office@anfrageassistent4you.com<br>
-+43 676 3314900<br>
-
-Andreas Lechner, Vertrieb<br>
-vertrieb@anfrageassistent4you.com <br>
-+49 172 176 5348<br>
-
-Jascha Lemburg, Support<br>
-technik@anfrageassistent4you.com<br>
-+43 720 880563
